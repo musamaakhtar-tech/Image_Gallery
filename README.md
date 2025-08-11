@@ -2,6 +2,20 @@
 
 Welcome to the **Image Gallery** project! This is a simple and responsive image gallery built with HTML, CSS, and JavaScript, designed to showcase your images beautifully. 
 
+Light Mode
+<p align="center">
+  <kbd>
+    <img src="https://github.com/musamaakhtar-tech/Image_Gallery/blob/main/Image_Gallery_Light.png" alt="Image Gallery Light Mode Demo">
+  </kbd>
+</p>
+
+Dark Mode
+<p align="center">
+  <kbd>
+    <img src="https://github.com/musamaakhtar-tech/Image_Gallery/blob/main/Image_Gallery_Dark.png" alt="Image Gallery Dark Mode Demo">
+  </kbd>
+</p>
+
 ## 🚀 Features
 
 - **Responsive Design**: Looks great on all devices! 📱💻
