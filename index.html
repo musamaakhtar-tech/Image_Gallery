@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+        <button id="toggle-theme">🌙</button>
+    </header>
+    <div class="full-img" id="fullImgBox">
+        <img src="images/1.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="gallery-wrap">
+        <button id="backBtn" aria-label="Previous">&lt;</button>
+        <div class="gallery">
+            <div>
+                <span><img src="images/1.jpg" onclick="openFullImg(this.src)"></span>
+                <span><img src="images/2.jpg" onclick="openFullImg(this.src)"></span>
+                <span><img src="images/3.jpg" onclick="openFullImg(this.src)"></span>
+            </div>
+            <div>
+                <span><img src="images/4.jpg" onclick="openFullImg(this.src)"></span>
+                <span><img src="images/5.jpg" onclick="openFullImg(this.src)"></span>
+                <span><img src="images/6.jpg" onclick="openFullImg(this.src)"></span>
+            </div>
+            <div>
+                <span><img src="images/7.jpg" onclick="openFullImg(this.src)"></span>
+                <span><img src="images/8.jpg" onclick="openFullImg(this.src)"></span>
+                <span><img src="images/9.jpg" onclick="openFullImg(this.src)"></span>
+            </div>
+        </div>
+        <button id="nextBtn" aria-label="Next">&gt;</button>
+    </div>
+    <footer>
+        <p>© 2025 Image Gallery. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
