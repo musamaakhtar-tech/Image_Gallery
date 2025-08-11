@@ -37,6 +37,8 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
 var toggleButton = document.getElementById("toggle-theme");
 toggleButton.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
