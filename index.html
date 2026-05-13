@@ -15,9 +15,9 @@
             <h1>Image Gallery</h1>
         </div>
         <div class="header-controls">
-            <button id="slideshow-btn" title="Start Slideshow">▶</button>
-            <button id="random-btn" title="Random Image">🎲</button>
-            <button id="toggle-theme" title="Toggle Theme">🌙</button>
+            <button id="slideshow-btn" title="Start Slideshow">&#9654;</button>
+            <button id="random-btn" title="Random Image">&#127922;</button>
+            <button id="toggle-theme" title="Toggle Theme">&#127769;</button>
         </div>
     </header>
 
@@ -26,182 +26,190 @@
         <button class="filter-tab" data-filter="nature">Nature</button>
         <button class="filter-tab" data-filter="city">City</button>
         <button class="filter-tab" data-filter="travel">Travel</button>
-        <button class="filter-tab" data-filter="art">Art</button>
     </div>
 
     <div class="gallery-container">
         <div class="stats-bar">
             <div class="stat">
-                <span class="stat-icon">📷</span>
+                <span class="stat-icon">&#128247;</span>
                 <span id="image-count">9 Images</span>
             </div>
             <div class="stat">
-                <span class="stat-icon">❤️</span>
+                <span class="stat-icon">&#10084;</span>
                 <span id="fav-count">0 Favorites</span>
             </div>
         </div>
 
         <div class="masonry-grid" id="gallery">
+            <!-- Image 1: Golden Sunset - Nature -->
             <div class="gallery-item" data-index="0" data-category="nature">
                 <span class="category-badge">Nature</span>
-                <img src="images/1.jpg" alt="Mountain Lake" loading="lazy">
+                <img src="images/1.jpg" alt="Golden Sunset">
                 <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
                 </div>
                 <div class="item-info">
-                    <h3>Mountain Lake</h3>
-                    <p>Switzerland • Landscape</p>
+                    <h3>Golden Sunset</h3>
+                    <p>California, USA - Landscape</p>
                 </div>
             </div>
 
+            <!-- Image 2: City Skyline - City -->
             <div class="gallery-item" data-index="1" data-category="city">
                 <span class="category-badge">City</span>
-                <img src="images/2.jpg" alt="Urban Skyline" loading="lazy">
+                <img src="images/2.jpg" alt="City Skyline">
                 <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
                 </div>
                 <div class="item-info">
-                    <h3>Urban Skyline</h3>
-                    <p>New York • Architecture</p>
+                    <h3>City Skyline</h3>
+                    <p>New York, USA - Architecture</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-index="2" data-category="travel">
-                <span class="category-badge">Travel</span>
-                <img src="images/3.jpg" alt="Ancient Temple" loading="lazy">
+            <!-- Image 3: Mountain Peak - Nature -->
+            <div class="gallery-item" data-index="2" data-category="nature">
+                <span class="category-badge">Nature</span>
+                <img src="images/3.jpg" alt="Mountain Peak">
                 <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
                 </div>
                 <div class="item-info">
-                    <h3>Ancient Temple</h3>
-                    <p>Thailand • History</p>
+                    <h3>Mountain Peak</h3>
+                    <p>Swiss Alps - Landscape</p>
                 </div>
             </div>
 
+            <!-- Image 4: Ocean Waves - Nature -->
             <div class="gallery-item" data-index="3" data-category="nature">
                 <span class="category-badge">Nature</span>
-                <img src="images/4.jpg" alt="Forest Trail" loading="lazy">
+                <img src="images/4.jpg" alt="Ocean Waves">
                 <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
                 </div>
                 <div class="item-info">
-                    <h3>Forest Trail</h3>
-                    <p>Pacific Northwest • Adventure</p>
+                    <h3>Ocean Waves</h3>
+                    <p>Hawaii, USA - Seascape</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-index="4" data-category="art">
-                <span class="category-badge">Art</span>
-                <img src="images/5.jpg" alt="Abstract Art" loading="lazy">
+            <!-- Image 5: Forest Path - Nature -->
+            <div class="gallery-item" data-index="4" data-category="nature">
+                <span class="category-badge">Nature</span>
+                <img src="images/5.jpg" alt="Forest Path">
                 <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
                 </div>
                 <div class="item-info">
-                    <h3>Abstract Art</h3>
-                    <p>Gallery • Creative</p>
+                    <h3>Forest Path</h3>
+                    <p>Oregon, USA - Adventure</p>
                 </div>
             </div>
 
+            <!-- Image 6: Desert Dunes - Travel -->
             <div class="gallery-item" data-index="5" data-category="travel">
                 <span class="category-badge">Travel</span>
-                <img src="images/6.jpg" alt="Beach Sunset" loading="lazy">
+                <img src="images/6.jpg" alt="Desert Dunes">
                 <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
-                </div>
-                <div class="item-info">
-                    <h3>Beach Sunset</h3>
-                    <p>Maldives • Relaxation</p>
-                </div>
-            </div>
-
-            <div class="gallery-item" data-index="6" data-category="city">
-                <span class="category-badge">City</span>
-                <img src="images/7.jpg" alt="Night Lights" loading="lazy">
-                <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
-                </div>
-                <div class="item-info">
-                    <h3>Night Lights</h3>
-                    <p>Tokyo • Nightlife</p>
-                </div>
-            </div>
-
-            <div class="gallery-item" data-index="7" data-category="nature">
-                <span class="category-badge">Nature</span>
-                <img src="images/8.jpg" alt="Desert Dunes" loading="lazy">
-                <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
                 </div>
                 <div class="item-info">
                     <h3>Desert Dunes</h3>
-                    <p>Dubai • Landscape</p>
+                    <p>Sahara, Morocco - Landscape</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-index="8" data-category="art">
-                <span class="category-badge">Art</span>
-                <img src="images/9.jpg" alt="Starry Night" loading="lazy">
+            <!-- Image 7: Night City Lights - City -->
+            <div class="gallery-item" data-index="6" data-category="city">
+                <span class="category-badge">City</span>
+                <img src="images/7.jpg" alt="Night City Lights">
                 <div class="item-actions">
-                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
-                    <button class="item-action-btn share" title="Share">↗</button>
-                    <button class="item-action-btn download" title="Download">⬇</button>
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
                 </div>
                 <div class="item-info">
-                    <h3>Starry Night</h3>
-                    <p>Cosmos • Astronomy</p>
+                    <h3>Night City Lights</h3>
+                    <p>Tokyo, Japan - Nightlife</p>
+                </div>
+            </div>
+
+            <!-- Image 8: Waterfall - Nature -->
+            <div class="gallery-item" data-index="7" data-category="nature">
+                <span class="category-badge">Nature</span>
+                <img src="images/8.jpg" alt="Waterfall">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
+                </div>
+                <div class="item-info">
+                    <h3>Waterfall</h3>
+                    <p>Iceland - Natural Wonder</p>
+                </div>
+            </div>
+
+            <!-- Image 9: Northern Lights - Nature -->
+            <div class="gallery-item" data-index="8" data-category="nature">
+                <span class="category-badge">Nature</span>
+                <img src="images/9.jpg" alt="Northern Lights">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">&#9829;</button>
+                    <button class="item-action-btn share" title="Share">&#8599;</button>
+                    <button class="item-action-btn download" title="Download">&#11015;</button>
+                </div>
+                <div class="item-info">
+                    <h3>Northern Lights</h3>
+                    <p>Norway - Aurora Borealis</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="full-img" id="fullImgBox">
-        <span class="close-btn" onclick="closeFullImg()">&times;</span>
-        <button class="nav-btn" id="prevBtn" onclick="navigateImage(-1)">&#10094;</button>
+        <span class="close-btn">&times;</span>
+        <button class="nav-btn" id="prevBtn">&#10094;</button>
         <div class="full-img-content">
             <img src="" id="fullImg" alt="">
             <div class="full-img-details">
                 <h2 id="img-title">Image Title</h2>
                 <div class="detail-row">
-                    <span class="detail-icon">📍</span>
+                    <span class="detail-icon">&#128205;</span>
                     <span id="img-location">Location</span>
                 </div>
                 <div class="detail-row">
-                    <span class="detail-icon">📅</span>
+                    <span class="detail-icon">&#128197;</span>
                     <span id="img-date">Date</span>
                 </div>
                 <div class="detail-row">
-                    <span class="detail-icon">📐</span>
+                    <span class="detail-icon">&#128207;</span>
                     <span id="img-dimensions">Dimensions</span>
                 </div>
                 <div class="detail-row">
                     <button class="item-action-btn favorite" id="detail-fav" style="width:100%; margin-top:15px; justify-content:center; gap:8px;">
-                        <span>♥</span> Add to Favorites
+                        <span>&#9829;</span> Add to Favorites
                     </button>
                 </div>
             </div>
         </div>
-        <button class="nav-btn" id="nextBtn" onclick="navigateImage(1)">&#10095;</button>
+        <button class="nav-btn" id="nextBtn">&#10095;</button>
     </div>
 
     <div class="slideshow-controls" id="slideshowControls">
-        <button class="slideshow-btn-control" id="playPauseBtn">⏸</button>
-        <button class="slideshow-btn-control" id="stopSlideshow">⏹</button>
+        <button class="slideshow-btn-control" id="playPauseBtn">&#9208;</button>
+        <button class="slideshow-btn-control" id="stopSlideshow">&#9209;</button>
         <div class="slideshow-timer">
             <span id="slideTimer">3s</span>
         </div>
