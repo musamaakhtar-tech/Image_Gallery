@@ -12,33 +12,57 @@
         <h1>Image Gallery</h1>
         <button id="toggle-theme">🌙</button>
     </header>
-    <div class="full-img" id="fullImgBox">
-        <img src="images/1.jpg" id="fullImg">
-        <span onclick="closeFullImg()">X</span>
-    </div>
-    <div class="gallery-wrap">
-        <button id="backBtn" aria-label="Previous">&lt;</button>
+
+    <div class="gallery-container">
         <div class="gallery">
-            <div>
-                <span><img src="images/1.jpg" onclick="openFullImg(this.src)"></span>
-                <span><img src="images/2.jpg" onclick="openFullImg(this.src)"></span>
-                <span><img src="images/3.jpg" onclick="openFullImg(this.src)"></span>
+            <div class="gallery-item" data-index="0">
+                <img src="images/1.jpg" alt="Image 1">
+                <div class="overlay">Beautiful View</div>
             </div>
-            <div>
-                <span><img src="images/4.jpg" onclick="openFullImg(this.src)"></span>
-                <span><img src="images/5.jpg" onclick="openFullImg(this.src)"></span>
-                <span><img src="images/6.jpg" onclick="openFullImg(this.src)"></span>
+            <div class="gallery-item" data-index="1">
+                <img src="images/2.jpg" alt="Image 2">
+                <div class="overlay">Nature Scene</div>
             </div>
-            <div>
-                <span><img src="images/7.jpg" onclick="openFullImg(this.src)"></span>
-                <span><img src="images/8.jpg" onclick="openFullImg(this.src)"></span>
-                <span><img src="images/9.jpg" onclick="openFullImg(this.src)"></span>
+            <div class="gallery-item" data-index="2">
+                <img src="images/3.jpg" alt="Image 3">
+                <div class="overlay">Mountain Peak</div>
+            </div>
+            <div class="gallery-item" data-index="3">
+                <img src="images/4.jpg" alt="Image 4">
+                <div class="overlay">Ocean Waves</div>
+            </div>
+            <div class="gallery-item" data-index="4">
+                <img src="images/5.jpg" alt="Image 5">
+                <div class="overlay">Forest Path</div>
+            </div>
+            <div class="gallery-item" data-index="5">
+                <img src="images/6.jpg" alt="Image 6">
+                <div class="overlay">Sunset Glow</div>
+            </div>
+            <div class="gallery-item" data-index="6">
+                <img src="images/7.jpg" alt="Image 7">
+                <div class="overlay">City Lights</div>
+            </div>
+            <div class="gallery-item" data-index="7">
+                <img src="images/8.jpg" alt="Image 8">
+                <div class="overlay">Desert Dunes</div>
+            </div>
+            <div class="gallery-item" data-index="8">
+                <img src="images/9.jpg" alt="Image 9">
+                <div class="overlay">Starry Night</div>
             </div>
         </div>
-        <button id="nextBtn" aria-label="Next">&gt;</button>
     </div>
-    <footer> 
-        <p>&copy; <span id="currentYear"></span> Image Gallery. All Rights Reserved.</p> 
+
+    <div class="full-img" id="fullImgBox">
+        <span onclick="closeFullImg()">&times;</span>
+        <button class="nav-btn" id="prevBtn" onclick="navigateImage(-1)">&#10094;</button>
+        <img src="" id="fullImg">
+        <button class="nav-btn" id="nextBtn" onclick="navigateImage(1)">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Image Gallery. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>

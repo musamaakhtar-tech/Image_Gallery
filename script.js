@@ -1,37 +1,49 @@
-var fullImgBox = document.getElementById("fullImgBox");
-var fullImg = document.getElementById("fullImg");
+const fullImgBox = document.getElementById("fullImgBox");
+const fullImg = document.getElementById("fullImg");
+const galleryItems = document.querySelectorAll(".gallery-item");
 
-function openFullImg(pic) {
-    fullImgBox.style.display = "flex";
-    fullImg.src = pic;
+let currentIndex = 0;
+const images = Array.from(galleryItems).map(item => ({
+    src: item.querySelector("img").src,
+    caption: item.querySelector(".overlay").textContent
+}));
+
+galleryItems.forEach((item, index) => {
+    item.addEventListener("click", () => openFullImg(index));
+});
+
+function openFullImg(index) {
+    currentIndex = index;
+    fullImg.src = images[currentIndex].src;
+    fullImgBox.classList.add("active");
+    document.body.style.overflow = "hidden";
 }
 
 function closeFullImg() {
-    fullImgBox.style.display = "none";
+    fullImgBox.classList.remove("active");
+    document.body.style.overflow = "auto";
 }
 
-let scroll = document.querySelector(".gallery");
-let backBtn = document.getElementById("backBtn");
-let nextBtn = document.getElementById("nextBtn");
+function navigateImage(direction) {
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    fullImg.src = images[currentIndex].src;
+    fullImg.style.animation = "scaleIn 0.3s ease";
+    setTimeout(() => fullImg.style.animation = "", 300);
+}
 
-scroll.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    scroll.scrollLeft += evt.deltaY;
-});
-
-nextBtn.addEventListener("click", () => {
-    scroll.scrollLeft += 900;
-});
-
-backBtn.addEventListener("click", () => {
-    scroll.scrollLeft -= 900;
+fullImgBox.addEventListener("click", (e) => {
+    if (e.target === fullImgBox) {
+        closeFullImg();
+    }
 });
 
 document.addEventListener("keydown", (event) => {
+    if (!fullImgBox.classList.contains("active")) return;
+
     if (event.key === "ArrowRight") {
-        nextBtn.click();
+        navigateImage(1);
     } else if (event.key === "ArrowLeft") {
-        backBtn.click();
+        navigateImage(-1);
     } else if (event.key === "Escape") {
         closeFullImg();
     }
@@ -39,7 +51,7 @@ document.addEventListener("keydown", (event) => {
 
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-var toggleButton = document.getElementById("toggle-theme");
+const toggleButton = document.getElementById("toggle-theme");
 toggleButton.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     toggleButton.innerText = document.body.classList.contains("dark-mode") ? "🌞" : "🌙";
