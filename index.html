@@ -4,62 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="progress-bar" id="progressBar"></div>
+
     <header>
-        <h1>Image Gallery</h1>
-        <button id="toggle-theme">🌙</button>
+        <div class="header-left">
+            <h1>Image Gallery</h1>
+        </div>
+        <div class="header-controls">
+            <button id="slideshow-btn" title="Start Slideshow">▶</button>
+            <button id="random-btn" title="Random Image">🎲</button>
+            <button id="toggle-theme" title="Toggle Theme">🌙</button>
+        </div>
     </header>
 
+    <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="nature">Nature</button>
+        <button class="filter-tab" data-filter="city">City</button>
+        <button class="filter-tab" data-filter="travel">Travel</button>
+        <button class="filter-tab" data-filter="art">Art</button>
+    </div>
+
     <div class="gallery-container">
-        <div class="gallery">
-            <div class="gallery-item" data-index="0">
-                <img src="images/1.jpg" alt="Image 1">
-                <div class="overlay">Beautiful View</div>
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-icon">📷</span>
+                <span id="image-count">9 Images</span>
             </div>
-            <div class="gallery-item" data-index="1">
-                <img src="images/2.jpg" alt="Image 2">
-                <div class="overlay">Nature Scene</div>
+            <div class="stat">
+                <span class="stat-icon">❤️</span>
+                <span id="fav-count">0 Favorites</span>
             </div>
-            <div class="gallery-item" data-index="2">
-                <img src="images/3.jpg" alt="Image 3">
-                <div class="overlay">Mountain Peak</div>
+        </div>
+
+        <div class="masonry-grid" id="gallery">
+            <div class="gallery-item" data-index="0" data-category="nature">
+                <span class="category-badge">Nature</span>
+                <img src="images/1.jpg" alt="Mountain Lake" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Mountain Lake</h3>
+                    <p>Switzerland • Landscape</p>
+                </div>
             </div>
-            <div class="gallery-item" data-index="3">
-                <img src="images/4.jpg" alt="Image 4">
-                <div class="overlay">Ocean Waves</div>
+
+            <div class="gallery-item" data-index="1" data-category="city">
+                <span class="category-badge">City</span>
+                <img src="images/2.jpg" alt="Urban Skyline" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Urban Skyline</h3>
+                    <p>New York • Architecture</p>
+                </div>
             </div>
-            <div class="gallery-item" data-index="4">
-                <img src="images/5.jpg" alt="Image 5">
-                <div class="overlay">Forest Path</div>
+
+            <div class="gallery-item" data-index="2" data-category="travel">
+                <span class="category-badge">Travel</span>
+                <img src="images/3.jpg" alt="Ancient Temple" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Ancient Temple</h3>
+                    <p>Thailand • History</p>
+                </div>
             </div>
-            <div class="gallery-item" data-index="5">
-                <img src="images/6.jpg" alt="Image 6">
-                <div class="overlay">Sunset Glow</div>
+
+            <div class="gallery-item" data-index="3" data-category="nature">
+                <span class="category-badge">Nature</span>
+                <img src="images/4.jpg" alt="Forest Trail" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Forest Trail</h3>
+                    <p>Pacific Northwest • Adventure</p>
+                </div>
             </div>
-            <div class="gallery-item" data-index="6">
-                <img src="images/7.jpg" alt="Image 7">
-                <div class="overlay">City Lights</div>
+
+            <div class="gallery-item" data-index="4" data-category="art">
+                <span class="category-badge">Art</span>
+                <img src="images/5.jpg" alt="Abstract Art" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Abstract Art</h3>
+                    <p>Gallery • Creative</p>
+                </div>
             </div>
-            <div class="gallery-item" data-index="7">
-                <img src="images/8.jpg" alt="Image 8">
-                <div class="overlay">Desert Dunes</div>
+
+            <div class="gallery-item" data-index="5" data-category="travel">
+                <span class="category-badge">Travel</span>
+                <img src="images/6.jpg" alt="Beach Sunset" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Beach Sunset</h3>
+                    <p>Maldives • Relaxation</p>
+                </div>
             </div>
-            <div class="gallery-item" data-index="8">
-                <img src="images/9.jpg" alt="Image 9">
-                <div class="overlay">Starry Night</div>
+
+            <div class="gallery-item" data-index="6" data-category="city">
+                <span class="category-badge">City</span>
+                <img src="images/7.jpg" alt="Night Lights" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Night Lights</h3>
+                    <p>Tokyo • Nightlife</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-index="7" data-category="nature">
+                <span class="category-badge">Nature</span>
+                <img src="images/8.jpg" alt="Desert Dunes" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Desert Dunes</h3>
+                    <p>Dubai • Landscape</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-index="8" data-category="art">
+                <span class="category-badge">Art</span>
+                <img src="images/9.jpg" alt="Starry Night" loading="lazy">
+                <div class="item-actions">
+                    <button class="item-action-btn favorite" title="Add to Favorites">♥</button>
+                    <button class="item-action-btn share" title="Share">↗</button>
+                    <button class="item-action-btn download" title="Download">⬇</button>
+                </div>
+                <div class="item-info">
+                    <h3>Starry Night</h3>
+                    <p>Cosmos • Astronomy</p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="full-img" id="fullImgBox">
-        <span onclick="closeFullImg()">&times;</span>
+        <span class="close-btn" onclick="closeFullImg()">&times;</span>
         <button class="nav-btn" id="prevBtn" onclick="navigateImage(-1)">&#10094;</button>
-        <img src="" id="fullImg">
+        <div class="full-img-content">
+            <img src="" id="fullImg" alt="">
+            <div class="full-img-details">
+                <h2 id="img-title">Image Title</h2>
+                <div class="detail-row">
+                    <span class="detail-icon">📍</span>
+                    <span id="img-location">Location</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-icon">📅</span>
+                    <span id="img-date">Date</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-icon">📐</span>
+                    <span id="img-dimensions">Dimensions</span>
+                </div>
+                <div class="detail-row">
+                    <button class="item-action-btn favorite" id="detail-fav" style="width:100%; margin-top:15px; justify-content:center; gap:8px;">
+                        <span>♥</span> Add to Favorites
+                    </button>
+                </div>
+            </div>
+        </div>
         <button class="nav-btn" id="nextBtn" onclick="navigateImage(1)">&#10095;</button>
     </div>
+
+    <div class="slideshow-controls" id="slideshowControls">
+        <button class="slideshow-btn-control" id="playPauseBtn">⏸</button>
+        <button class="slideshow-btn-control" id="stopSlideshow">⏹</button>
+        <div class="slideshow-timer">
+            <span id="slideTimer">3s</span>
+        </div>
+        <button class="slideshow-btn-control" id="decreaseSpeed">-</button>
+        <button class="slideshow-btn-control" id="increaseSpeed">+</button>
+    </div>
+
+    <div class="toast" id="toast"></div>
 
     <footer>
         <p>&copy; <span id="currentYear"></span> Image Gallery. All Rights Reserved.</p>
